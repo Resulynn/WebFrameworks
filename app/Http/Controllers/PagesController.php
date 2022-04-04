@@ -18,11 +18,11 @@ class PagesController extends Controller
 
     function services()
     {
-        $data = array(
-            'title' => 'SERVICES from controller',
+        $post = array(
+            'title' => 'SERVICES',
             'services' => ['Web Design', 'Programming', 'SEO']
         );
 
-        return view('pages.services')-> with($data);
+        return view('pages.services')-> with($post);
     }
 }
