@@ -10,6 +10,12 @@
             </div>
             <a href="/post/{{$posts->id}}/edit" class="btn btn-primary">Edit</a>
 
+        {!! Form::open(['action'=>['App\Http\Controllers\PostsController@destroy',$posts->id],
+            'method'=>'POST'])!!}
+            {{ Form::hidden('_method','DELETE') }}
+            {{ Form::submit('Delete',['class' => 'btn btn-danger']) }}
+        {!! Form::close() !!}
+
     </div>
 
 
